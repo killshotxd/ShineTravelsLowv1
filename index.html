@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<title>Responsive Navbar</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body id="body">
+    <header id="header">
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2> <i class="fas fa-code"></i> Shine Travels</h2>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="nav.html" id="logo">
+                    <h1> <i class="fas fa-code" style="font-size: 20px;"></i> Shine Travels</h1>
+                </a>
+            </div>
+
+            <ul class="nav__list" id="navlinkitems">
+                <li class="nav__item">
+                    <a href="#home-section" class="nav__link" id="home">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about-section" class="nav__link" id="about">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#skills-section" class="nav__link" id="service">Services</a>
+                </li>
+                <!-- <li class="nav__item">
+                    <a href="#projects-section" class="nav__link" id="work">Safety Measures</a>
+                </li> -->
+
+                <li class="nav__item">
+                    <a href="#contacts-section" class="nav__link" id="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section one" id="home-section">
+        <img src="/1.jpg" alt="">
+    </section>
+    <section class="section two" id="about-section">
+        <img src="/2.jpg" alt="">
+    </section>
+    <section class="section three" id="skills-section">
+        <div class="serv">
+            <h1>Available Cars/Bus</h1>
+            <p>
+                We have wide range of Luxarious cars from which you can choose and rent your favourite car
+            </p>
+            <img src="/4.jpg" alt="">
+            <img src="/6.jpg" alt="">
+            
+        </div>
+        
+    </section>
+    <!-- <section class="section four" id="projects-section">
+
+    </section> -->
+    <section class="section five" id="contacts-section">
+        <img src="/3.jpg" alt="">
+    </section>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            document.getElementById("navbar").style.background = "#fff";
+        }
+
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelectorAll(".nav__link");
+
+        navToggle.addEventListener("click", () => {
+            document.body.classList.toggle("nav-open");
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                document.body.classList.remove("nav-open");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
